@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="https://openflights.org/data.html">
+    <xs:element name="OpenFlights Airports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="airport_id" maxOccurs="unbounded"/>   
+                <xs:element ref="airline_id" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="dest_airport_id" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>          
+        </xs:complexType>
+        <!-- primary keys -->
+        <xs:key name="PKairport_id">
+            <xs:selector xpath="airports/airport_id"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:key name="PKairline_id">
+            <xs:selector xpath="airlines/airline_id"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:key name="PKdest_airport_id">
+            <xs:selector xpath="routes/dest_airport_id"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <!-- foreign keys -->
+        <xs:keyref name="FKairportsToroutes" refer="PKairport_id">
+            <xs:selector xpath="routes/airport_id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+        <xs:keyref name="FKairlinesToroutes" refer="PKairline_id">
+            <xs:selector xpath="routes/airline_id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+    </xs:element>
+    <xs:element name="Airports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="airport_id" type="xs:int"/>
+      			<xs:element name="name" type="xs:string"/>
+      			<xs:element name="city" type="xs:string"/>
+      			<xs:element name="country" type="xs:string"/>
+      			<xs:element name="IATA" type="xs:string" length = "3"/>
+      			<xs:element name="ICAO" type="xs:string" length = "4"/>
+      			<xs:element name="Latitude" type="xs:int" totalDigits = "6""/>
+      			<xs:element name="Longitude" type="xs:int" totalDigits = "6"/>
+      			<xs:element name="Altitude" type="xs:int"/>
+      			<xs:element name="Type" type="xs:string"/>
+      			<xs:element name="Source" type="xs:string"/>
+      			<xs:element name="Timezone" type="xs:int"/>
+      			<xs:element name="DST" type="xs:string"/>
+      			<xs:element name="tz_db_timezone" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Airlines">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="airline_id" type="xs:int"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="IATA" type="xs:string" length = "3"/>
+                <xs:element name="ICAO" type="xs:string" length = "4"/>
+                <xs:element name="Country" type="xs:string"/>
+                <xs:element name="Equipment" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Routes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="airline_id" type="xs:int"/>
+      			<xs:element name="airline_code" type="xs:int"/>
+      			<xs:element name="airport_id" type="xs:int"/>
+      			<xs:element name="stops" type="xs:string"/>
+      			<xs:element name="dest_airport_id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

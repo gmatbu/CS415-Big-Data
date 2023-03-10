@@ -1,0 +1,62 @@
+<AIRPORTS> 
+   <airport> 
+   	   <airport_id>1111</airport_id>
+       <name>Spokane International Airport</name> 
+       <city>Spokane</city> 
+       <country>United States</country> 
+       <IATA>GEG</IATA> 
+       <ICAO>KGEG</ICAO> 
+       <Latitude>23.745354</Latitude> 
+       <Longitude>-121.749384</Longitude> 
+       <Altitude>111</Altitude>
+       <Type>airport</Type> 
+       <Source>Legacy</Source> 
+       <Timezone>-5</Timezone> 
+       <DST>A</DST> 
+       <tz_db_timezone>America/Los Angeles</tz_db_timezone> </airport> 
+   <airport> 
+   	   <airport_id>2222</airport_id>
+       <name>Metropolitan Oakland International Airport</name> 
+       <city>Oakland</city> 
+       <country>United States</country> 
+       <IATA>OAK</IATA> 
+       <ICAO>KOAK</ICAO> 
+       <Latitude>34.625341</Latitude> 
+       <Longitude>-119.734476</Longitude> 
+       <Altitude>22</Altitude>
+       <Type>airport</Type> 
+       <Source>Legacy</Source> 
+       <Timezone>-8</Timezone> 
+       <DST>A</DST> 
+       <tz_db_timezone>America/Los Angeles</tz_db_timezone> </airport> 
+    <airport> 
+   	   <airport_id>3333</airport_id>
+       <name>Miami International Airport</name> 
+       <city>Miami</city> 
+       <country>United States</country> 
+       <IATA>MIA</IATA> 
+       <ICAO>KMIA</ICAO> 
+       <Latitude>22.639864</Latitude> 
+       <Longitude>-121.846521</Longitude> 
+       <Altitude>1235</Altitude>
+       <Type>airport</Type> 
+       <Source>Legacy</Source> 
+       <Timezone>-6</Timezone> 
+       <DST>A</DST> 
+       <tz_db_timezone>America/New York</tz_db_timezone> </airport> 
+    <airport> 
+   	   <airport_id>4444</airport_id>
+       <name>Seattle Tacoma Airport</name> 
+       <city>Seattle</city> 
+       <country>United States</country> 
+       <IATA>SEA</IATA> 
+       <ICAO>KSEA</ICAO> 
+       <Latitude>32.725547</Latitude> 
+       <Longitude>-124.735482</Longitude> 
+       <Altitude>6</Altitude>
+       <Type>airport</Type> 
+       <Source>Legacy</Source> 
+       <Timezone>-8</Timezone> 
+       <DST>A</DST> 
+       <tz_db_timezone>America/Los Angeles</tz_db_timezone> </airport> 
+</AIRPORTS>
